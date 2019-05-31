@@ -1,0 +1,58 @@
+.chevrolet_item a:hover
+{
+    text-decoration: none;
+}
+
+.chevrolet_item a img
+{
+    width:235px;
+    height:250px;
+}
+
+.chevrolet_item p
+{
+    height: 50px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.chevrolet_item a
+{
+    background-color: #f5eeee;
+    border:1px solid #cecece;
+}
+
+.mobile_hidden
+{
+    display: table-cell;
+}
+
+.mobile_visible
+{
+    display:none;
+}
+
+
+.procode
+{
+    font-weight: 700;
+    text-decoration: underline;
+    cursor:pointer;
+}
+
+.procode:hover
+{
+    text-decoration: none;
+}
+
+@media(max-width:360px) {
+    .mobile_hidden
+    {
+        display: none;
+    }
+
+    .mobile_visible
+    {
+        display:table-cell;
+    }
+}

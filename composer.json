@@ -1,0 +1,34 @@
+{
+  "name": "ispomazkin/yii2-opel",
+  "description": "Opel EPC Catalog without VIN decoding",
+  "type": "yii2-extension",
+  "keywords": [
+    "yii2",
+    "opel",
+    "catalog",
+    "epc"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ivan Pomazkin",
+      "email": "ispomazkin@gmail.com",
+      "homepage": "https://github.com/ispomazkin/yii2-opel",
+      "role": "Developer"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "yiisoft/yii2": "~2.0.0",
+    "yiisoft/yii2-httpclient": "^2.0"
+
+  },
+  "extra": {
+    "bootstrap": "ispomazkin\\opel\\Bootstrap"
+  },
+  "autoload": {
+    "psr-4": {
+      "ispomazkin\\chevrolet\\": "src"
+    }
+  }
+}
