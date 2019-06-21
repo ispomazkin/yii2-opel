@@ -56,7 +56,7 @@ class Module extends BaseModule
     public $kwdsPattern=[
         'models'=>'EPC Opel',
         'categories'=>'Opel {model}',
-        'groups'=>'{model} {year} ',
+        'groups'=>'{model}',
         'sub-groups'=>'{group}',
         'parts'=>'{parts}'
 
@@ -71,10 +71,10 @@ class Module extends BaseModule
      */
     public $descriptionPattern=[
         'models'=>'Каталог запчастей Опель',
-        'categories'=>'Каталог запчастей Опель {model} {year}',
-        'groups'=>'Каталог запчастей Опель {model} {year} по категории {category}',
-        'sub-groups'=>'Каталог запчастей Опель {model} {year} {category} Группа {group}',
-        'parts'=>'Каталог запчастей Опель {model} {year} {category} {group} {parts}'
+        'categories'=>'Каталог запчастей Опель {model}',
+        'groups'=>'Каталог запчастей Опель {model}  по категории {category}',
+        'sub-groups'=>'Каталог запчастей Опель {model} {category} Группа {group}',
+        'parts'=>'Каталог запчастей Опель {model} {category} {group} {parts}'
 
     ];
 
