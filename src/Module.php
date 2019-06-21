@@ -30,7 +30,7 @@ class Module extends BaseModule
      * @var string
      * Базовый путь к каталогу
      */
-    public $base_url='/opel';
+    public $base_url='/katalogi/opel';
 
 
     /**

@@ -18,6 +18,7 @@ composer require ispomazkin/yii2-opel
             'class'=>'\ispomazkin\opel\Module',
             'host'=>'http://149.154.64.192',
             'image_path'=>'/img/img_opel/img',
+            'base_url'=>'/katalogi/opel'
             'search_pattern'=>'http://site.com/search/?article={article}&brand=opel'
         ],
     ],
@@ -33,7 +34,7 @@ composer require ispomazkin/yii2-opel
             'host'=>'http://149.154.64.192',
             'image_path'=>'/img/img_opel/img',
             'search_pattern'=>'http://site.com/search/?article={article}&brand=opel',
-            'base_url'=>'/chevrolet'
+            'base_url'=>'/katalogi/opel'
             'titlePattern=>[
                   'years'=>'Запчасти Опель',
                   'categories'=>'{model}',
