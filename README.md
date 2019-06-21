@@ -15,7 +15,7 @@ composer require ispomazkin/yii2-opel
     'modules' => [
         ......
         'opel'=>[
-            'class'=>'\ispomazkin\chevrolet\Module',
+            'class'=>'\ispomazkin\opel\Module',
             'host'=>'http://149.154.64.192',
             'image_path'=>'/img/img_opel',
             'search_pattern'=>'http://site.com/search/?article={article}&brand=opel'
