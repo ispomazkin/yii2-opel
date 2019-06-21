@@ -9,23 +9,26 @@
  * @var $data array
  */
 
-use ispomazkin\chevrolet\OpelAssetBundle;
+use ispomazkin\opel\OpelAssetBundle;
 use yii\helpers\Html;
 use yii\helpers\Url;
 
 
 OpelAssetBundle::register($this);
 ?>
-<?=Html::tag('h1','Каталог запчастей Шевроле Европа')?>
+<?=Html::tag('h1',$this->title)?>
 <table class="table table-bordered table-responsive">
     <tr>
         <th>Модель</th>
-        <th>Год выпуска</th>
     </tr>
     <?php foreach($data as $row):?>
         <tr>
-            <td><?=$row['model']?></td>
-            <td><?=$this->render('years',['years'=>$row['years']])?></td>
+            <td><?=Html::a($row['model'],Url::to([
+                    'opel/categories',
+                    'model_url'=>$row['url']
+                ]),[
+                    'title'=>$row['model']
+                ])?></td>
         </tr>
     <?php endforeach;?>
 </table>

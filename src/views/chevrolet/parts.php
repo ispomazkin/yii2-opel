@@ -13,21 +13,17 @@
 
 use yii\helpers\Html;
 use yii\helpers\Url;
-use ispomazkin\chevrolet\OpelAssetBundle;
+use ispomazkin\opel\OpelAssetBundle;
 
 OpelAssetBundle::register($this);
 
 
-$img_src = $img_path . '/' .  $data['parts'][0]['image'];
+$img_src = $img_path . '/' .  $data['parts'][0]['img'];
+$h1 = isset($data['subgroup'])  && $data['subgroup'] ? $data['group'].'. '.$data['subgroup'] : $data['group'];
 ?>
 
-<?=Html::tag('h1',$data['model'].' '.$data['year'])?>
-<?=Html::tag('h2',$data['category'])?>
-<?=Html::tag('h3',$data['group'])?>
+<?=Html::tag('h1',$h1)?>
 
-<?php if(isset($data['subgroup'])):?>
-    <?=Html::tag('h3',$data['subgroup'])?>
-<?php endif;?>
 
 <div class="wrapper">
     <div class="row">
@@ -43,19 +39,17 @@ $img_src = $img_path . '/' .  $data['parts'][0]['image'];
             <th><span class="mobile_hidden">Артикул</span><span class="mobile_visible">Арт.</span></th>
             <th>Описание</th>
             <th class="mobile_hidden">Применение</th>
-            <th class="mobile_hidden">Период</th>
+            <th class="mobile_hidden">VIN</th>
             <th><span class="mobile_hidden">Количество</span><span class="mobile_visible">Кол-во</span></th>
-            <th class="mobile_hidden">Примечание</th>
         </tr>
         <?php foreach($data['parts'] as $part):?>
             <tr>
                 <td><?=$part['pic']?></td>
                 <td><?=$this->render('_article',['article'=>$part['article'],'search_pattern'=>$search_pattern])?></td>
-                <td><?=$part['type']?></td>
-                <td class="mobile_hidden"><?=$this->render('_description_parts',['text'=>$part['description'],'codes'=>$part['codes']])?></td>
-                <td class="mobile_hidden"><?=$part['year']?></td>
+                <td class="mobile_hidden"><?=$part['description']?></td>
+                <td class="mobile_hidden"><?=$part['primen']?></td>
+                <td class="mobile_hidden"><?=$part['nomencl']?></td>
                 <td><?=$part['qty']?></td>
-                <td class="mobile_hidden"><?=$part['comment']?></td>
             </tr>
         <?php endforeach?>
     </table>

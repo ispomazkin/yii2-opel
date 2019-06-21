@@ -13,21 +13,27 @@
 
 use yii\helpers\Html;
 use yii\helpers\Url;
-use ispomazkin\chevrolet\OpelAssetBundle;
+use ispomazkin\opel\OpelAssetBundle;
 
-OpelAssetBundle::register($this);
+use app\components\Helper;
+
+
+$context = $this->context;
+/* @var $context \ispomazkin\opel\controllers\OpelController*/
+
+
 ?>
-<?=Html::tag('h1',$data['model'].' '.$data['year'])?>
-<?=Html::tag('h2',$data['category'])?>
+<?//=Html::tag('h1',$context->titlePattern['categories'])?>
+<?=Html::tag('h1',$context->titlePattern['groups'])?>
 <table class="table table-bordered table-responsive">
     <tr>
         <th>Группа запчастей</th>
     </tr>
     <?php foreach($data['groups'] as $group):?>
         <tr>
-            <td><?=Html::a($group['description'],Url::to(['chevrolet/sub-groups','group_url'=>$group['url'],
+            <td><?=Html::a($group['description'],Url::to(['opel/sub-groups','group_url'=>$group['url'],
                     'category_url'=>$data['category_url'],
-                    'year_url'=>$data['model_url']
+                    'model_url'=>$data['model_url']
                 ]))?></td>
         </tr>
     <?php endforeach;?>
