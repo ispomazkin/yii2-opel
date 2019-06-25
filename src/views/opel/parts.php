@@ -46,7 +46,7 @@ $h1 = isset($data['subgroup'])  && $data['subgroup'] ? $data['group'].'. '.$data
             <tr>
                 <td><?=$part['pic']?></td>
                 <td><?=$this->render('_article',['article'=>$part['article'],'search_pattern'=>$search_pattern])?></td>
-                <td class="mobile_hidden"><?=$part['description']?></td>
+                <td><?=$part['description']?></td>
                 <td class="mobile_hidden"><?=$part['primen']?></td>
                 <td class="mobile_hidden"><?=$part['nomencl']?></td>
                 <td><?=$part['qty']?></td>
